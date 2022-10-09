@@ -1,0 +1,266 @@
+/* The next two styling apply to the entire body of the page */
+
+/* In regards to the background animation, i have looked it up on google and got help from the following link: 
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_animatable
+I have learned that the @keyframes rule specifies the animation code as it changes between CSS styles from one to another. 
+To have different or more than two color animations you can specify it with percentages where 0% is the start and 100% is when the animation is complete
+
+As far as i understand, when you add an @keyframe style you will need to add some kind of variable (can be anything as long as its the same) to both the body/animation 
+and @keyframes for the configuration to work. 
+
+the "5s" refer to the duration of the animation
+
+*/
+
+body {
+    background: gainsboro;
+    animation: shop-background 5s infinite;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+
+}
+
+@keyframes shop-background {
+    from {
+        background-color: gainsboro;
+    }
+
+    to {
+        background-color: white;
+    }
+}
+
+/* End of body Selectors */
+
+.single-product-container {
+    padding: 10px;
+}
+
+button {
+    background-color: brown;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.services-exclude {
+    text-decoration: line-through;
+    color: red;
+}
+
+/* List Styles */
+
+ul {
+    list-style: none;
+}
+
+/* this allowed me to add any string value as a bullet in the UL list */
+ul li:after {
+    content: " ✓  ";
+}
+
+li.services-exclude:after {
+    content: " X  ";
+    color: red;
+}
+
+/* End of Lis Styles */
+
+.navbar-brand:hover {
+    text-decoration: underline 3px solid brown;
+}
+
+.col {
+    padding: 10px;
+}
+
+.col:hover {
+    background-color: lightgray;
+}
+
+.single-product-image {
+    border: 1px solid black;
+}
+
+/* Catalogue Page Styling */
+.product-price {
+    font-size: 15pt;
+}
+
+.product-headings {
+    font-size: 18pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-discription {
+    font-size: 10pt;
+}
+
+/* End of Catalogue Page Styling */
+
+.jumbotron {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+tr,
+td {
+    border: 1px solid;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+th {
+    color: brown;
+    border: 1px solid black;
+}
+
+footer {
+
+    width: 100%;
+    height: auto;
+}
+
+/* Heading Styles */
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+/* Image Styles */
+
+img {
+    border: 2px solid grey;
+    width: 100%;
+
+}
+
+img.testimonials {
+    width: 100px;
+}
+
+
+img.testimonials:hover {
+    filter: grayscale(100%);
+}
+
+
+img.item {
+    transition: transform .2s;
+}
+
+img.item:hover {
+    transform: scale(1.1);
+}
+
+/* End of Image Styles */
+
+.float-box {
+    width: 100%;
+    background-color: #e9ecef;
+    border: 5px solid gainsboro;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* instead of line breakes between sections i like to create myself a dedicated spacer which i can configure at one place */
+.spacer {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+
+
+#logo-link:hover {
+    text-decoration: underline 2px darkgrey;
+}
+
+
+.cart-right-panel {
+    right: 0;
+    top: 0;
+    position: absolute;
+    height: auto;
+    width: 30%;
+    padding: 100px;
+    margin: auto;
+    background-color: whitesmoke;
+
+
+}
+
+.product-headings-cart {
+    margin: 50px;
+    font-size: 18pt;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: solid 1px;
+    padding-top: 50px;
+
+}
+
+p {
+    font-size: 20px;
+}
+
+
+.accordian {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.accordian .box {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.accordian .box .box-header h3 {
+    position: relative;
+    color: #ffffff;
+    background-color: brown;
+    padding: 20px;
+    text-align: center;
+    line-height: 25px;
+
+}
+
+.accordian .box .box-body {
+    padding: 20px;
+    position: relative;
+    display: none;
+    /*Hides box info on load*/
+    font-size: 20px;
+    color: #444444;
+
+}
+
+#block {
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    margin-top: -28px;
+}

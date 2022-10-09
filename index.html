@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link to Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Link to my custom stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+    <title>Matthew's Tech Shop</title>
+
+</head>
+<!--The content of this project was adapted from task 7-->
+
+<body onload="onload()">
+
+    <!-- Header -->
+    <header>
+        <div style="margin-top: 25px;"></div>
+        <div class="boxed">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a id="logo-link" href="index.html">
+                        <h3 style="color: brown;">Matthew's
+
+                            <medium class="text-muted">Tech Shop</medium>
+                        </h3>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <nav style="text-align: center;">
+                        <a style="color: black;" class="navbar-brand" href="index.html"> Home </a>
+                        <a style="color: black;" class="navbar-brand" href="services.html"> Services </a>
+                        <a style="color: black;" class="navbar-brand" href="catalogue.html"> Catalogue </a>
+                        <a style="color:black;" class="navbar-brand" href="cart.html"> Your Cart </a>
+
+                    </nav>
+
+                </div>
+                <!-- I have copied all images from a website/store called evetech and wasnt sure how else to 
+                    reference it than to just create a linked -->
+                <div class="col-lg-2">
+                    <a href="cart.html">
+                        <button id="cartItemQty" style="float: right;">0 items in cart</button>
+                    </a>
+
+
+                </div>
+            </div>
+
+        </div>
+        <hr style="border-color: black;">
+        <div id="block">
+        </div>
+
+        <!-- End of Header -->
+
+        <!-- I like to use jumbotron as it automatically aligns your content vertically centered-->
+
+        <!--Accordion (dropdown)-->
+        <!-- I personally work for a company called NV Technologies and used some content from our website here -->
+        <div class="accordian">
+            <div class="box">
+                <div class="box-header">
+                    <h3>About us</h3>
+
+                </div>
+                <div class="box-body active">
+                    <p>>We are a leading IT company that values establishing lasting connections with our
+                        business associates. We have a strong presence in the IT consulting sector and offer expert
+                        services to
+                        clients all over South Africa. With our combination of helpful services and complimentary
+                        products, you will
+                        be sure to find whatever you are looking for when you choose us. We always aim to provide the
+                        best service
+                        to our clients, helping them find solutions to their needs, even in the most difficult
+                        situations. Whether
+                        you need basic support, advanced solutions, or simply some hardware, we are here to help!</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-header">
+                    <h3>Our Mission</h3>
+
+                </div>
+                <div class="box-body">
+                    <p>It is our mission to provide our customers with the best quality service, and products, helping
+                        them
+                        find and create solutions for their own businesses, big or small. We aim to help our clients to
+                        run
+                        their businesses efficiently, and productively, without any hastle.</p>
+                </div>
+
+
+            </div>
+
+            <div class="box">
+                <div class="box-header">
+                    <h3>Our Vision</h3>
+
+                </div>
+                <div class="box-body">
+                    <p>TOur vision is to create a better and more efficient work and living envoronment for our clients,
+                        whether it is a large scale commercial project, or a smaller scale residential project, our goal
+                        is
+                        to ensure each client gets the help they need with all things technology.</p>
+                </div>
+            </div>
+
+            <h2>Testimonials</h2>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <!-- I have linked the below image externally -->
+                    <img class="testimonials" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+                    <h3>Lucy</h3>
+                    <p>"It has been such a wonderfull experience working with Matthew's tech shop. The service is always
+                        fantastic, and they somehow always find a solution for me, even when I think it will be
+                        impossible."
+                    </p>
+                </div>
+                <div class="col">
+                    <!-- I have linked the below image externally -->
+                    <img class="testimonials" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+                    <h3>Terry</h3>
+                    <p>"All I can say is, I highly reccomend working with Matthew's Tech Shop! The service is great, the
+                        people are fun, and the results always exceed my expectations! "</p>
+                </div>
+                <div class="col">
+                    <!-- I have linked the below image externally -->
+                    <img class="testimonials" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+                    <h3>Jacob</h3>
+                    <p>"I thought I would never find a solution for my business that is both functional and practical,
+                        but
+                        when I reached out to Matthew's Tech Shop, they guided me and helped me to set up something that
+                        my
+                        employees found easy to use, and helps us immensely!"</p>
+                </div>
+
+            </div>
+
+        </div>
+        <a href="references.html">
+            <button id="cartItemQty" style="float: right;">Task References</button>
+        </a>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <!-- Link to Javascript file-->
+        <script type="text/javascript" src="task15.js"></script>
+
+</body>
+
+</html>

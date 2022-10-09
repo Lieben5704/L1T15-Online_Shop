@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link to Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Link to my custom stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Matthew's Tech Shop</title>
+
+</head>
+
+<body onload="onload()">
+    <!-- Header -->
+    <header>
+        <div style="margin-top: 25px;"></div>
+        <div class="boxed">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a id="logo-link" href="index.html">
+                        <h3 style="color: brown;">Matthew's
+
+                            <medium class="text-muted">Tech Shop</medium>
+                        </h3>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <nav style="text-align: center;">
+                        <a style="color: black;" class="navbar-brand" href="index.html"> Home </a>
+                        <a style="color: black;" class="navbar-brand" href="services.html"> Services </a>
+                        <a style="color: black;" class="navbar-brand" href="catalogue.html"> Catalogue </a>
+                        <a style="color:black;" class="navbar-brand" href="cart.html"> Your Cart </a>
+
+                    </nav>
+
+                </div>
+
+                <div class="col-lg-2">
+                    <a href="cart.html">
+                        <button id="cartItemQty" style="float: right;">0 items in cart</button>
+                    </a>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <hr style="border-color: black;">
+
+        <!-- End of Header -->
+
+        <!-- Jumbotron is a very helpful element to use in terms of responsivenes -->
+        <div class="jumbotron">
+
+            <h1>My Cart</h1>
+
+        </div>
+        <div>
+            <h3>Items in my cart:</h3>
+            <div>
+                <h3 id="cartItem">No items in Cart</h3>
+                <br>
+            </div>
+        </div>
+
+        <h3>Create an account to proceed with your order:</h3>
+        <hr>
+        <form>
+            <div class="row">
+                <div style="text-align: left;" class="col">
+
+                    <!-- the "for element" looks for the matching "id element" in the input field to interact -->
+
+                    <label for="firstname"> First Name: </label>
+                    <input type="text" id="firstname" class="form-control" placeholder="e.g. Jack">
+                </div>
+                <div style="text-align: left;" class="col">
+                    <label for="lastname"> Last Name: </label>
+                    <input type="text" id="lastname" class="form-control" placeholder="e.g. Bush">
+                </div>
+                <div style="text-align: left;" class="col">
+                    <label for="contact"> Contact Number: </label>
+                    <input type="text" id="contact" class="form-control" placeholder="e.g. 011 000 000">
+                </div>
+            </div>
+            <br>
+            <div style="text-align: left;">
+
+                <!-- "col-fluid class from bootstrap" keeps this field responsive -->
+
+                <label for="email"> Email Address: </label>
+                <input type="text" id="email" class="form-control" placeholder="etc. name@gmail.com">
+            </div>
+            <br>
+            <h4>Preferred Contact Method</h4>
+            <div class="col">
+
+                <!-- specifying the "name= " in radio buttons and keeping it the same tells that its part of the same group, 
+                    if the name is not the same it will loose the functionality to only be limited by one selection  -->
+
+                <input type="radio" id="phone" name="method" value="phone">
+                <label for="phone">SMS</label>
+                <input type="radio" id="email" name="method" value="email">
+                <label for="email">Email</label>
+                <input type="radio" id="whatsapp" name="method" value="whatsapp">
+                <label for="whatsapp">Whatsapp</label>
+
+            </div>
+            </div>
+            <br>
+            <h4>Delivery or Collection?</h4>
+            <div class="col">
+
+                <!-- specifying the "name= " in radio buttons and keeping it the same tells that its part of the same group, 
+                if the name is not the same it will loose the functionality to only be limited by one selection  -->
+
+                <input type="radio" id="delivery" name="method" value="delivery">
+                <label for="phone">Delivery</label>
+                <input type="radio" id="collection" name="method" value="collection">
+                <label for="email">Collection</label>
+
+            </div>
+            </div>
+            <br>
+            <h4>Delivery Method:</h4>
+            <div>
+
+                <!-- selecting a delivery method will update the cart total-->
+
+
+                <input onclick="freeDelivery()" type="radio" id="basic" name="method" value="0">
+                <label for="phone">Basic - Free</label>
+                <br>
+                <input onclick="quickDelivery()" type="radio" id="quick" name="method" value="150">
+
+                <label for="email">Quick - R150</label>
+                <br>
+                <input onclick="expressDelivery()" type="radio" id="express" name="method" value="300">
+                <label for="email">Express - R300</label>
+
+            </div>
+            <br>
+
+            <!-- input user's delivery adress-->
+
+            <h4>Delivery Adress</h4>
+            <div class="col-fluid">
+                <label for="email"> Street Address: </label>
+                <!-- "col-fluid class" keep this field full witdh at all times -->
+                <input type="text" class="form-control" placeholder="Street" aria-label="Street">
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <label for="email"> Suburb: </label>
+                    <input type="text" class="form-control" placeholder="Suburb" aria-label="Suburb">
+                </div>
+                <div class="col">
+                    <label for="email"> Province: </label>
+                    <input type="text" class="form-control" placeholder="Province" aria-label="Province">
+                </div>
+                <div class="col">
+                    <label for="area"> Area Code: </label>
+                    <input type="text" class="form-control" placeholder="Area Code" aria-label="Area Code">
+                </div>
+            </div>
+            <br>
+
+            <!-- Cart total display-->
+
+            <div style="height: auto;">
+                <div class="float-box">
+                    <h2>Cart Total</h2>
+                    <p id="cartTotal"></p>
+                    <p id="incl">Incl VAT and delivery</p>
+                </div>
+
+                <!-- Coupons-->
+
+                <h4>Insert Coupon Code:</h4>
+                <i>Coupon codes do not work unless delivery is selected</i>
+
+                <input id="coupon" type="text" class="form-control" placeholder="See comments for codes">
+                <button type="button" onclick="addCoupon()">Apply Coupon</button>
+
+                <!-- confirm order to generate random reference number-->
+
+                <button type="button" onclick="confirm()" id="confirmOrder" class="full-width-button">Create Account and
+                    Confirm
+                    Order</button>
+            </div>
+            <br <!-- Link to Javascript file-->
+            <script type="text/javascript" src="task15.js"></script>
+
+</body>
+
+</html>

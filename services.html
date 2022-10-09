@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link to Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Link to my custom stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <title>Matthew's Tech Shop</title>
+
+</head>
+
+<body onload="onload()">
+
+    <!-- Header -->
+    <header>
+        <div style="margin-top: 25px;"></div>
+        <div class="boxed">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a id="logo-link" href="index.html">
+                        <h3 style="color: brown;">Matthew's
+
+                            <medium class="text-muted">Tech Shop</medium>
+                        </h3>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <nav style="text-align: center;">
+                        <a style="color: black;" class="navbar-brand" href="index.html"> Home </a>
+                        <a style="color: black;" class="navbar-brand" href="services.html"> Services </a>
+                        <a style="color: black;" class="navbar-brand" href="catalogue.html"> Catalogue </a>
+                        <a style="color:black;" class="navbar-brand" href="cart.html"> Your Cart </a>
+
+                    </nav>
+
+                </div>
+
+
+                <!-- I have copied all images from a website/store called evetech and wasnt sure how else to 
+                    reference it than to just create a linked -->
+                <div class="col-lg-2">
+                    <a href="cart.html">
+                        <button id="cartItemQty" style="float: right;">0 items in cart</button>
+                    </a>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <hr style="border-color: black;">
+        <div id="block"></div>
+
+        <!-- End of Header -->
+
+        <div class="jumbotron">
+
+            <h1 style="text-align: center;">Our "SLA" Services</h1>
+
+        </div>
+
+        <div class="spacer"></div>
+
+        <table>
+            <tr style="background-color: lightgrey;">
+                <th>Startup Package</th>
+                <th>Agency Package Package</th>
+                <th>Corporate Business Package</th>
+            </tr>
+            <tr>
+                <td>
+                    <!-- all excluded services will contain a line-through -->
+                    <ul>
+                        <li>Google Ad Services</li>
+                        <li class="services-exclude">Web Design</li>
+                        <li class="services-exclude">IT Support</li>
+                        <li>Domain Management</li>
+                        <li class="services-exclude">On-Site visits</li>
+                        <li class="services-exclude">Security Assesments</li>
+                    </ul>
+
+                </td>
+                <td>
+
+                    <ul>
+                        <li>Google Ad Services</li>
+                        <li>Web Design</li>
+                        <li>IT Support</li>
+                        <li>Domain Management</li>
+                        <li class="services-exclude">On-Site visits</li>
+                        <li class="services-exclude">Security Assesments</li>
+                    </ul>
+
+                </td>
+                <td>
+
+                    <ul>
+                        <li>Google Ad Services</li>
+                        <li>Web Design</li>
+                        <li>IT Support</li>
+                        <li>Domain Management</li>
+                        <li>On-Site visits</li>
+                        <li>Security Assesments</li>
+                    </ul>
+
+                </td>
+            </tr>
+            <tr style="color: green;">
+                <td><b>R 300/pm</b></td>
+                <td><b>R 550/pm</b></td>
+                <td><b>R 800p/m</b></td>
+            </tr>
+
+
+
+        </table>
+
+
+        <hr>
+        <div>
+            <p>For more info, visit <a href="https://hyperiondev.co.za">https://hyperiondev.co.za</a></p>
+            <p>OR</p>
+        </div>
+        <hr>
+        <div class="jumbotron">
+
+            <h1 style="text-align: center;">Contact Us</h1>
+
+
+
+        </div>
+
+        <h3><u>Address:</u></h3>
+        <p>Block E Ground Floor, Upper Grayston Business Park, <br>150 Linden St, Simba,
+            Sandton, 2196</p>
+
+        <h3><u>Contact Number:</u></h3>
+        <p>Matthew Liebenberg: 076 360 6473<br>Tarein du Plessis: 083 570 4818</p>
+
+        <h3><u>Email Address</u></h3>
+        <p>Matthew Liebenberg: <a href="mailto:liebenbergmatthew.ml@gmail.com">liebenbergmatthew.ml@gmail.com</a></p>
+        <p>Tarien du Plessis <a href="mailto:tarienduplessis10@gmail.com">tarienduplessis10@gmail.com</a></p>
+        <a href="references.html">
+            <button id="cartItemQty" style="float: right;">Task References</button>
+        </a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Link to Javascript file-->
+        <script type="text/javascript" src="task15.js"></script>
+
+</body>
+
+</html>
